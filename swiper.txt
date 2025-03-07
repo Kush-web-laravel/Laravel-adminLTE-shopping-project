@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Coverflow</title>
+
+    <!-- Swiper CSS -->
+     <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet" />
+
+     <style>
+        /* Swiper container styling */
+        .swiper-container {
+            width: 100%;
+            height: 500px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Adjust slide size */
+        .swiper-slide {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        /* Ensure image fits properly */
+        .swiper-slide img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        /* Make center slide bigger and more prominent */
+        .swiper-slide-active img {
+            transform: scale(1.1); /* Pop out effect */
+        }
+
+        /* Reduce opacity for side slides */
+        .swiper-slide:not(.swiper-slide-active) {
+            opacity: 0.6;
+        }
+
+        /* Move navigation arrows outside */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: black;
+            font-size: 40px;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .swiper-button-next {
+            right: -80px;
+        }
+
+        .swiper-button-prev {
+            left: -80px;
+        }
+
+        /* Pagination styling */
+        .swiper-pagination-bullet {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Swiper Container -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="{{ asset('images/fade-1.jpg') }}" alt="Slide 1">
+        </div>
+        <div class="swiper-slide">
+            <img src="{{ asset('images/fade-2.jpg') }}" alt="Slide 2">
+        </div>
+        <div class="swiper-slide">
+            <img src="{{ asset('images/fade-3.jpg') }}" alt="Slide 3">
+        </div>
+        <div class="swiper-slide">
+            <img src="{{ asset('images/fade-4.jpg') }}" alt="Slide 4">
+        </div>
+    </div>
+
+    <!-- Swiper Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            coverflowEffect: {
+                rotate: 0, /* No rotation */
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false, /* Removes the black shadows */
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+.addBtn{
+    margin-left: 72%;
+}
+
+.productsBtn{
+    margin-left: 88%;
+}
+
+#addProducts {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-left: 25%;
+}
+
+#addProducts label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#addProducts input[type="text"],
+#addProducts input[type="number"],
+#addProducts input[type="file"],
+#addProducts textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#addProducts textarea {
+    resize: none;
+}
+
+#addProducts input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#addProducts input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+#updateProducts {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-left: 25%;
+}
+
+#upadteProducts label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#updateProducts input[type="text"],
+#updateProducts input[type="number"],
+#updateProducts input[type="file"],
+#updateProducts textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#updateProducts textarea {
+    resize: none;
+}
+
+#updateProducts input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#updateProducts input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#buyProduct {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-left: 32%;
+}
+
+#buyProduct label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#buyProduct input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#buyProduct input[type="submit"] {
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    margin-left: 30%;
+}
+
+#myOrdersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+#myOrdersTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+#myOrdersTable th, #myOrdersTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+#myOrdersTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#myOrdersTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#myOrdersTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#myOrdersTable img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.reorder-btn {
+    background-color: rgb(56, 56, 56);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reorder-btn:hover {
+    background-color: rgb(39, 39, 39);
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.inline-form {
+    display: inline;
+    margin-left: 10px; 
+}
+
+.inline-form button {
+    display: inline-block;
+}
+
+
+
+#cartTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+#cartTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+#cartTable th, #cartTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+#cartTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#cartTable tbody tr input[name='discount']{
+    width: 520px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+#cartTable tbody tr input[name='discount']::placeholder{
+   padding-left: 40px;
+}
+
+#cartTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#cartTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#cartTable img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.inline-form {
+    display: inline;
+    margin-left: 10px; 
+}
+
+.inline-form button {
+    display: inline-block;
+}

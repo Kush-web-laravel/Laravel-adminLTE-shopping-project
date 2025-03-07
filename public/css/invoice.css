@@ -1,0 +1,61 @@
+h2{
+    text-align: center;
+}
+
+.invoice-number{
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    float: right;
+    margin-bottom: 30px;
+}
+
+.invoice-number label{
+    margin-right: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#invoiceNumber{
+    width: 140px;
+}
+
+.container a {
+    margin: 100px 20px;
+}
+
+.invoiceTable{
+    margin: 100px 25px;
+}
+
+.invoiceTable #invoice-table, th, td{
+    border: 2px solid;
+    text-align: center;
+}
+
+td{
+    padding: 8px 17px;
+}
+
+#description{
+    width: 116%;
+    margin-top: 60px;
+    height: 200px;
+    resize: none;
+    border-radius: 3px;
+}
+
+#description::placeholder{
+    padding-left: 20px;
+    padding-top: 12px;
+    font-size: 24px;
+}
+
+input[type="submit"]{
+    margin-top: 105px;
+    width: 220px;
+    height: 70px;
+    font-size: 30px;
+    margin-left: 50%;
+    border-radius: 14px;
+}

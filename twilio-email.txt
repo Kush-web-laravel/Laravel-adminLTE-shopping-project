@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Mail\TestEmail;
+use Illuminate\Support\Facades\Mail;
+
+class TwilioEmailController extends Controller
+{
+    //
+    public function sendTestEmail()
+    {
+        $data = ['message' => 'This is a test!'];
+        Mail::to('kushchhatbar19@gmail.com')->send(new TestEmail($data));
+        return 'Email sent successfully!';
+    }
+}
+
+
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class TestEmail extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    public $data;
+
+    public function __construct($data)
+    {
+        $this->data = $data;
+    }
+
+    public function build()
+    {
+        $address = 'kushc@200oksolutions.com';
+        $subject = 'This is a demo!';
+        $name = 'Joey';
+
+        return $this->view('emails.test')
+                    ->from($address, $name)
+                    ->cc($address, $name)
+                    ->bcc($address, $name)
+                    ->replyTo("kushchhatbar19@gmail", $name)
+                    ->subject($subject)
+                    ->with([ 'test_message' => $this->data['message'] ]);
+    }
+}
